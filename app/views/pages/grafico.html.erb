@@ -1,0 +1,44 @@
+	
+<div class="col-sm-8 col-sm-offset-4 col-lg-7 col-lg-offset-5">
+		
+<%
+	source = 'https://1broker.com/api/v1/account/info.php?token=8797b426e7738926f0f1eadee7eedd5e&pretty=1'
+	buffer = open(source).read
+	result = JSON.parse(buffer, {:symbolize_names => true})
+	-%>
+
+	<br>
+
+	<br>
+	<hr>
+	<p>
+	Username:
+	<%= result[:response][:username] -%>
+	</p>
+	<hr>
+	<p>Saldo atual:
+	<%= result[:response][:balance_btc] -%>
+	</p>
+
+	<%
+	source = 'https://1broker.com/api/v1/position/list_open.php?token=8797b426e7738926f0f1eadee7eedd5e&pretty=1'
+	buffer = open(source).read
+	result = JSON.parse(buffer, {:symbolize_names => true})
+	-%>
+
+	<hr>
+	<% if result[:response].to_s == "[]"%>
+		<p>Sem ordens abertas</p>
+	
+	<% end %>
+
+
+</div>
+
+
+
+
+
+
+
+

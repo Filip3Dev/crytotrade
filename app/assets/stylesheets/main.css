@@ -1,0 +1,29 @@
+body{
+	width: 80%;
+}
+
+.loginPanel{
+	margin-top:20px;
+}
+
+.login-heading-panel{
+	color:#30a5ff;
+}
+
+.footer{
+	position: absolute;
+    bottom: 0px;
+    padding: 5px;
+}
+.over{
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+
+}
+nav{
+  background-color: #0DD027 !important;
+}
+.navbar{
+  background-color: #0DD027 !important;
+}
